@@ -43,6 +43,9 @@ public class Main {
         System.out.println("Список створених драконів:");
         for (Dragon dragon : dragons) {
             dragon.displayInfo();
+            dragon.speak();
+            dragon.breatheFire();
+            System.out.println("----------------------");
         }
         scanner.close();
 
