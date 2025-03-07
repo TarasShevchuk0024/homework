@@ -2,7 +2,7 @@ package gmail.taras.shevchuk0024.lesson11;
 
 public class Main {
     public static void main(String[] args) {
-        int dayNumber = 5;
+        int dayNumber = 7;
         String day = switch (dayNumber) {
             case 1 -> "Monday";
             case 2 -> "Tuesday";
