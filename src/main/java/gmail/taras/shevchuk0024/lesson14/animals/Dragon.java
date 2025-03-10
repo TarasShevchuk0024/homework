@@ -38,4 +38,21 @@ public class Dragon {
     public void displayInfo() {
         System.out.println("Дракон: " + name + ", Вік: " + age + ", Вага: " + weight);
     }
+
+    public void speak() {
+        System.out.println(name + " каже: Я великий та могутній дракон!\uD83D\uDC09");
+    }
+
+    public void breatheFire() {
+        System.out.println(name + ": випускає полум'я! \uD83D\uDD25\uD83D\uDD25\uD83D\uDD25");
+    }
+
+    @Override
+    public String toString() {
+        return "Dragon{" +
+                "name='" + name + '\'' +
+                ", weight=" + weight +
+                ", age=" + age +
+                '}';
+    }
 }
