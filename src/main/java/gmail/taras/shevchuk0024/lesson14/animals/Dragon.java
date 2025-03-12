@@ -4,6 +4,8 @@ public class Dragon {
     private String name;
     private int age;
     private double weight;
+    private DragonType type;
+
 
     public Dragon () {
         System.out.println("Створено невідомого дракона");
@@ -18,6 +20,10 @@ public class Dragon {
         return weight;
     }
 
+    public DragonType getType() {
+        return type;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -29,14 +35,20 @@ public class Dragon {
     public void setWeight(double weight) {
         this.weight = weight;
     }
-    public Dragon(String name, int age, double weight) {
+
+    public void setType(DragonType type) {
+        this.type = type;
+    }
+
+    public Dragon(String name, int age, double weight, DragonType type ){
         this.name = name;
         this.age = age;
         this.weight = weight;
-        System.out.println("Створено повноцінного дракона" + name);
+        this.type = type;
+        System.out.println("Створено повноцінного дракона: " + name);
     }
     public void displayInfo() {
-        System.out.println("Дракон: " + name + ", Вік: " + age + ", Вага: " + weight);
+        System.out.println("Дракон: " + name + ", Вік: " + age + ", Вага: " + weight + ", Тип: " + type);
     }
 
     public void speak() {
@@ -51,8 +63,9 @@ public class Dragon {
     public String toString() {
         return "Dragon{" +
                 "name='" + name + '\'' +
-                ", weight=" + weight +
                 ", age=" + age +
+                ", weight=" + weight +
+                ", type=" + type +
                 '}';
     }
 }
