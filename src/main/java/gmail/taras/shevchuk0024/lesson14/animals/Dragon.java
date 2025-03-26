@@ -1,5 +1,7 @@
 package gmail.taras.shevchuk0024.lesson14.animals;
 
+import java.util.Objects;
+
 public class Dragon {
     private String name;
     private int age;
@@ -8,7 +10,7 @@ public class Dragon {
 
 
     public Dragon () {
-        System.out.println("Створено невідомого дракона");
+        System.out.println("Створено повноцінного дракона: ");
     }
     public String getName() {
         return name;
@@ -45,7 +47,7 @@ public class Dragon {
         this.age = age;
         this.weight = weight;
         this.type = type;
-        System.out.println("Створено повноцінного дракона: " + name);
+        System.out.println("Створено повноцінного дракона: " );
     }
     public void displayInfo() {
         System.out.println("Дракон: " + name + ", Вік: " + age + ", Вага: " + weight + ", Тип: " + type);
@@ -68,4 +70,17 @@ public class Dragon {
                 ", type=" + type +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Dragon dragon)) return false;
+        return age == dragon.age && Double.compare(weight, dragon.weight) == 0 && type == dragon.type;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(age, weight, type);
+    }
 }
+
+

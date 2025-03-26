@@ -19,6 +19,8 @@ public class Main {
         System.out.println(dragon1.getAge());
         System.out.println(dragon1.getWeight());
         System.out.println(dragon1.getType());
+        System.out.println(" ");
+
 
         Dragon dragon2 = new Dragon("Lucky", 154, 463.8, DragonType.WATER );
         System.out.println("Дані другого дракона: ");
@@ -27,6 +29,31 @@ public class Main {
         System.out.println(dragon2.getWeight());
         System.out.println(dragon2.getType());
         System.out.println(" ");
+
+        Dragon dragon3 = new Dragon();
+        dragon3.setName("Gerry");
+        dragon3.setAge(77);
+        dragon3.setWeight(528.4);
+        dragon3.setType(DragonType.FIRE);
+
+        System.out.println("Дані третього дракона: ");
+        System.out.println(dragon3.getName());
+        System.out.println(dragon3.getAge());
+        System.out.println(dragon3.getWeight());
+        System.out.println(dragon3.getType());
+        System.out.println(" ");
+
+        System.out.println("Порівняння драконів: ");
+        System.out.println("dragon1 == dragon2: " + dragon1.equals(dragon2));
+        System.out.println("dragon1 == dragon3: " + dragon1.equals(dragon3));
+        System.out.println(" ");
+
+        System.out.println("Хеш-коди драконів: ");
+        System.out.println("dragon1 hashCode: " + dragon1.hashCode());
+        System.out.println("dragon2 hashCode: " + dragon2.hashCode());
+        System.out.println("dragon3 hashCode: " + dragon3.hashCode());
+        System.out.println(" ");
+
 
         System.out.println("Тепер у нас є можливість створювати драконів самостійно: ");
         Dragon[] dragons = new Dragon[3];
