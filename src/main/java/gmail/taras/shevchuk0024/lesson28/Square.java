@@ -9,14 +9,14 @@ public class Square extends Rectangle {
     }
 
     @Override
+    public double calculatePerimeter() {return 4 * side; }
+
+    @Override
     public void displayInfo() {
         System.out.println("Фігура: Квадрат");
         System.out.println("Сторона " + side);
         System.out.println("Площа " + calculateArea());
+        System.out.println("Периметр: " + calculatePerimeter());
     }
 
-    @Override
-    public double calculatePerimeter() {
-        return 4 * side;
-    }
 }

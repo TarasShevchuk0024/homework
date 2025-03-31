@@ -14,16 +14,19 @@ public class Rectangle extends Shape {
         return width * height;
     }
 
+
+    @Override
+    public double calculatePerimeter() {
+        return 2 * (width + height);
+    }
+
     @Override
     public void displayInfo() {
         System.out.println("Фігура: Прямокутник");
         System.out.println("Ширина " + width);
         System.out.println("Висота " + height);
         System.out.println("Площа " + calculateArea());
+        System.out.println("Периметр: " + calculatePerimeter());
     }
 
-    @Override
-    public double calculatePerimeter() {
-        return 2 * (width + height);
-    }
 }
