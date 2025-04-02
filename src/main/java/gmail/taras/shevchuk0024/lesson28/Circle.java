@@ -13,14 +13,14 @@ public class Circle extends Shape {
     }
 
     @Override
+    public double calculatePerimeter() { return 2 * Math.PI * radius; }
+
+    @Override
     public void displayInfo() {
         System.out.println("Фігура: Коло");
         System.out.println("Радіус: " + radius);
         System.out.println("Площа: " + calculateArea());
+        System.out.println("Периметр: " + calculatePerimeter());
     }
 
-    @Override
-    public double calculatePerimeter() {
-        return 2 * Math.PI * radius;
-    }
 }

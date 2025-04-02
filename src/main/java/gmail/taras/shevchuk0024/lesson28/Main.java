@@ -9,17 +9,11 @@ public class Main {
         System.out.println(" ");
 
         circle.displayInfo();
-        System.out.println("Периметр: " + circle.calculatePerimeter());
-
         System.out.println(" ");
 
         rectangle.displayInfo();
-        System.out.println("Периметр: " + rectangle.calculatePerimeter());
-
         System.out.println(" ");
 
         square.displayInfo();
-        System.out.println("Периметр: " + square.calculatePerimeter());
-
     }
 }
