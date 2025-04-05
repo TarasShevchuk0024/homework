@@ -21,29 +21,28 @@ class Stack implements Stackable {
         return (top == maxSize -1);
     }
 
+
+
     @Override
-    public void addElementToStack(int element) {
+    public void addElementToStack(int element) throws StackIsFullException {
         if (isFull()) {
-            System.out.println("Помилка: Неможливо додати елемент, так як, Стек вже заповнений!");
-            return;
+            throw new StackIsFullException("Помилка: Неможливо додати елемент, так як, Стек вже заповнений!");
         }
         stackArray[++top] = element;
     }
 
     @Override
-    public int deleteElementFromStack() {
+    public int deleteElementFromStack() throws StackIsEmptyException {
         if (isEmpty()) {
-            System.out.println("Помилка: Немає елементів для видалення, так як, Стек порожній!");
-            return -1;
+            throw new StackIsEmptyException("Помилка: Немає елементів для видалення, так як, Стек порожній!");
         }
         return stackArray[top--];
     }
 
     @Override
-    public int readTop() {
+    public int readTop() throws StackIsEmptyException {
         if(isEmpty()) {
-            System.out.println("Помилка: Неможливо переглянути верхній елемент, так як Стек порожній!");
-            return -1;
+            throw new StackIsEmptyException("Помилка: Неможливо переглянути верхній елемент, так як Стек порожній!");
         }
         return stackArray [top];
     }
