@@ -4,33 +4,46 @@ public class ClassicStack {
     public static void main(String[] args) {
         Stack theStack = new Stack(7);
 
-        theStack.addElementToStack(44);
-        theStack.addElementToStack(51);
-        theStack.addElementToStack(28);
-        theStack.addElementToStack(86);
-        theStack.addElementToStack(145);
-        theStack.addElementToStack(3);
-        theStack.addElementToStack(876);
-        theStack.addElementToStack(654);
+        try {
+            theStack.addElementToStack(44);
+            theStack.addElementToStack(51);
+            theStack.addElementToStack(28);
+            theStack.addElementToStack(86);
+            theStack.addElementToStack(145);
+            theStack.addElementToStack(3);
+            theStack.addElementToStack(876);
+            theStack.addElementToStack(654);
+        } catch (StackIsFullException e) {
+            System.out.println("Помилка: " + e.getMessage());
+        }
         System.out.println(" ");
 
-        System.out.println("Верхній елемент: " + theStack.readTop());
+        try {
+            System.out.println("Верхній елемент: " + theStack.readTop());
+        } catch (StackIsEmptyException e) {
+            System.out.println("Помилка: " + e.getMessage());
+        }
         System.out.println(" ");
 
-        theStack.deleteElementFromStack();
-        System.out.println("Видалено: " + theStack.deleteElementFromStack());
+        try {
+            System.out.println("Видалено: " + theStack.deleteElementFromStack());
+        }catch (StackIsEmptyException e) {
+            System.out.println("Помилка: " + e.getMessage());
+        }
         System.out.println(" ");
-
-        System.out.println("Верхній елемент: " + theStack.readTop());
-        System.out.println(" ");
-
 
         while (!theStack.isEmpty()) {
-            int value = theStack.deleteElementFromStack();
-            System.out.println(value);
-            System.out.println(" ");
+            try {
+                int value = theStack.deleteElementFromStack();
+                System.out.println("Видалено: " + value);
+            }catch (StackIsEmptyException e) {
+                System.out.println("Помилка: " + e.getMessage());
+            }
         }
-        theStack.deleteElementFromStack();
-        System.out.println(" ");
+        try {
+            theStack.deleteElementFromStack();
+        }catch (StackIsEmptyException e) {
+            System.out.println("Помилка: " + e.getMessage());
+        }
     }
 }
