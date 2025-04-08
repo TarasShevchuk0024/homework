@@ -1,5 +1,7 @@
 package gmail.taras.shevchuk0024.lesson30_Interfaces;
 
+import java.util.Optional;
+
 class Stack implements Stackable {
     private int maxSize;
     private int[] stackArray;
@@ -41,9 +43,16 @@ class Stack implements Stackable {
 
     @Override
     public int readTop() throws StackIsEmptyException {
-        if(isEmpty()) {
+        if (isEmpty()) {
             throw new StackIsEmptyException("Помилка: Неможливо переглянути верхній елемент, так як Стек порожній!");
         }
-        return stackArray [top];
+        return stackArray[top];
+    }
+
+    public Optional<Integer> optionalDeleteElementFromStack() {
+        if(isEmpty()) {
+            return Optional.empty();
+        }
+        return Optional.of(stackArray[top--]);
     }
 }

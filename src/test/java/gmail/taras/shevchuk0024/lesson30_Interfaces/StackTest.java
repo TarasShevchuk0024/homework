@@ -2,6 +2,8 @@ package gmail.taras.shevchuk0024.lesson30_Interfaces;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Optional;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class StackTest {
@@ -48,6 +50,26 @@ class StackTest {
         Stack stack = new Stack(1);
         // when + then
         assertThrows(StackIsEmptyException.class, () -> stack.readTop());
+    }
+    @Test
+    void shouldReturnElementWrappedInOptionalWhenStackIsNotEmpty() throws StackIsFullException {
+        // given
+        Stack stack = new Stack(3);
+        stack.addElementToStack(15);
+        // when
+        Optional<Integer> result = stack.optionalDeleteElementFromStack();
+        // then
+        assertTrue(result.isPresent());
+        assertEquals(15,result.get());
+    }
+    @Test
+    void shouldReturnEmptyOptionalWhenStackIsEmpty() {
+        // given
+        Stack stack = new Stack(3);
+        // when
+        Optional<Integer>result = stack.optionalDeleteElementFromStack();
+        // then
+        assertTrue(result.isEmpty());
     }
 
 }
