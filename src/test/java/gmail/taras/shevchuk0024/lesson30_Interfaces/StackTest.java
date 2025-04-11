@@ -16,6 +16,7 @@ class StackTest {
         // then
         assertEquals(100, stack.readTop());
     }
+
     @Test
     void shouldThrowExceptionWhenStackIsFull() throws StackIsFullException {
         // given
@@ -25,6 +26,7 @@ class StackTest {
         // when + then
         assertThrows(StackIsFullException.class, () -> stack.addElementToStack(60));
     }
+
     @Test
     void shouldDeleteElementFromStack() throws StackIsFullException, StackIsEmptyException {
         // given
@@ -35,8 +37,9 @@ class StackTest {
         // when
         int delete = stack.deleteElementFromStack();
         // then
-        assertEquals(30,delete);
+        assertEquals(30, delete);
     }
+
     @Test
     void shouldThrowExceptionWhenStackIsEmptyOnDelete() {
         // given
@@ -44,6 +47,7 @@ class StackTest {
         // when + then
         assertThrows(StackIsEmptyException.class, () -> stack.deleteElementFromStack());
     }
+
     @Test
     void shouldThrowExceptionWhenStackIsEmptyOnReadTop() {
         // given
@@ -51,6 +55,7 @@ class StackTest {
         // when + then
         assertThrows(StackIsEmptyException.class, () -> stack.readTop());
     }
+
     @Test
     void shouldReturnElementWrappedInOptionalWhenStackIsNotEmpty() throws StackIsFullException {
         // given
@@ -60,14 +65,15 @@ class StackTest {
         Optional<Integer> result = stack.optionalDeleteElementFromStack();
         // then
         assertTrue(result.isPresent());
-        assertEquals(15,result.get());
+        assertEquals(15, result.get());
     }
+
     @Test
     void shouldReturnEmptyOptionalWhenStackIsEmpty() {
         // given
         Stack stack = new Stack(3);
         // when
-        Optional<Integer>result = stack.optionalDeleteElementFromStack();
+        Optional<Integer> result = stack.optionalDeleteElementFromStack();
         // then
         assertTrue(result.isEmpty());
     }

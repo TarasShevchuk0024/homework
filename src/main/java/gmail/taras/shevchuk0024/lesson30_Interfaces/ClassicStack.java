@@ -27,7 +27,7 @@ public class ClassicStack {
 
         try {
             System.out.println("Видалено: " + theStack.deleteElementFromStack());
-        }catch (StackIsEmptyException e) {
+        } catch (StackIsEmptyException e) {
             System.out.println("Помилка: " + e.getMessage());
         }
         System.out.println(" ");
@@ -36,13 +36,13 @@ public class ClassicStack {
             try {
                 int value = theStack.deleteElementFromStack();
                 System.out.println("Видалено: " + value);
-            }catch (StackIsEmptyException e) {
+            } catch (StackIsEmptyException e) {
                 System.out.println("Помилка: " + e.getMessage());
             }
         }
         try {
             theStack.deleteElementFromStack();
-        }catch (StackIsEmptyException e) {
+        } catch (StackIsEmptyException e) {
             System.out.println("Помилка: " + e.getMessage());
         }
     }

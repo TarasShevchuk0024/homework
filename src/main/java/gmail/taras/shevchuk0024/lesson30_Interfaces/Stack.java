@@ -20,9 +20,8 @@ class Stack implements Stackable {
 
     @Override
     public boolean isFull() {
-        return (top == maxSize -1);
+        return (top == maxSize - 1);
     }
-
 
 
     @Override
@@ -50,7 +49,7 @@ class Stack implements Stackable {
     }
 
     public Optional<Integer> optionalDeleteElementFromStack() {
-        if(isEmpty()) {
+        if (isEmpty()) {
             return Optional.empty();
         }
         return Optional.of(stackArray[top--]);
