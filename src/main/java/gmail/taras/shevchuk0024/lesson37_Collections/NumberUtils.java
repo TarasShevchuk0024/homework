@@ -5,9 +5,9 @@ import java.util.List;
 
 public class NumberUtils {
 
-    public static int getSum(List<Integer> numbers) {
-        int sum = 0;
-        for (int number : numbers) {
+    public static double getSum(List<Number> numbers) {
+        double sum = 0;
+        for (Number number : numbers) {
             sum += number;
         }
         return sum;
