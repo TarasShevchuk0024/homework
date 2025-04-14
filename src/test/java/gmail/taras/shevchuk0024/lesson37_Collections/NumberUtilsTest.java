@@ -26,7 +26,7 @@ class NumberUtilsTest {
         // when
         List<Integer> result = NumberUtils.multiplyOddNumber(numbers);
         // then
-        List<Integer> expected = Arrays.asList(22, 66, 110, 154, 198);
+        List<Integer> expected = List.of(22, 66, 110, 154, 198);
         assertEquals(expected, result);
     }
 }
