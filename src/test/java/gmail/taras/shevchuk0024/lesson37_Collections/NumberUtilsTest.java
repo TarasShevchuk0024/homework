@@ -12,7 +12,7 @@ class NumberUtilsTest {
     @Test
     void shouldReturnCorrectSumOfNumbers() {
         // given
-        List<Integer> numbers = Arrays.asList(11, 22, 33, 44, 55, 66, 77, 88, 99);
+        List<Integer> numbers = List.of(11, 22, 33, 44, 55, 66, 77, 88, 99);
         // when
         int result = NumberUtils.getSum(numbers);
         // then
