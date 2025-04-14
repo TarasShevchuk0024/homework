@@ -13,11 +13,11 @@ public class NumberUtils {
         return sum;
     }
 
-    public static List<Integer> multiplyOddNumber(List<Integer> numbers) {
-        List<Integer> result = new ArrayList<>();
-        for (int number : numbers) {
-            if (number % 2 != 0) {
-                result.add(number * 2);
+    public static List<Long> multiplyOddNumber(List<Number> numbers) {
+        List<Long> result = new ArrayList<>();
+        for (Number number : numbers) {
+            if (number.longValue() % 2 != 0) {
+                result.add(number.longValue() * 2);
             }
         }
         return result;
