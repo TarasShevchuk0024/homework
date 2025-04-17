@@ -5,15 +5,15 @@ import java.util.List;
 
 public class NumberUtils {
 
-    public static double getSum(List<Number> numbers) {
+    public static double getSum(List<Integer> numbers) {
         double sum = 0;
         for (Number number : numbers) {
-            sum += number;
+            sum += number.doubleValue();
         }
         return sum;
     }
 
-    public static List<Long> multiplyOddNumber(List<Number> numbers) {
+    public static List<Long> multiplyOddNumber(List<Integer> numbers) {
         List<Long> result = new ArrayList<>();
         for (Number number : numbers) {
             if (number.longValue() % 2 != 0) {

@@ -4,12 +4,12 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class dublicateNumbers {
+public class duplicateNumbers {
 
-    public static boolean isDublicate(List<Integer> numbers) {
+    public static boolean isDuplicate(List<Integer> numbers) {
         Set<Integer> uniqueNumbers = new HashSet<>();
         for (Integer number : numbers) {
-            if ( !uniqueNumbers.add(number)) {
+            if (!uniqueNumbers.add(number)) {
                 return true;
             }
         }
