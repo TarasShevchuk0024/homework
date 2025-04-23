@@ -1,19 +1,23 @@
 package gmail.taras.shevchuk0024.lesson40_Functional_Interface;
 
 import java.util.ArrayList;
+import java.util.function.Supplier;
 
-public class Supplier {
-    public static java.util.function.Supplier<String> randomWeekDay = () -> {
-        ArrayList<String> days = new ArrayList<>();
-        days.add("Понеділок");
-        days.add("Вівторок");
-        days.add("Середа");
-        days.add("Четвер");
-        days.add("Пʼятниця");
-        days.add("Субота");
-        days.add("Неділя");
+public class SupplierUtils {
 
-        int value = (int) (Math.random() * days.size());
-        return days.get(value);
+    public static final String[] WEEK_DAYS = {
+        "Понеділок",
+        "Вівторок",
+        "Середа",
+        "Четвер",
+        "Пʼятниця",
+        "Субота",
+        "Неділя"
+    };
+
+    public static Supplier<String> randomWeekDay = () -> {
+        int randomWeekDayIndex = (int) (Math.random() * WEEK_DAYS.length);
+        
+        return WEEK_DAYS[randomWeekDayIndex];
     };
 }
