@@ -16,7 +16,7 @@ class PredicateTest {
     }
 
     @Test
-    void shouldReturnFalseWhenNumberIsNotSimple() {
+    void shouldReturnFalseWhenNumberIsNotPrime() {
         // given
         int number = 40;
         // when
