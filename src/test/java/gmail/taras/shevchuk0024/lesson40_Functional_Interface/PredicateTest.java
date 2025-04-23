@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class PredicateTest {
     @Test
-    void shouldReturnTrueWhenNumberIsSimple() {
+    void shouldReturnTrueWhenNumberIsPrime() {
         // given
         int number = 3;
         // when
