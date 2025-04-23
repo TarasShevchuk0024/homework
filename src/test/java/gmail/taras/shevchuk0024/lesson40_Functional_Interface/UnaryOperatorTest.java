@@ -11,7 +11,7 @@ class UnaryOperatorTest {
         int value = 20;
 
         // when
-        int result = UnaryOperator.fibonacci.apply(value);
+        int result = UnaryOperatorUtils.fibonacci.apply(value);
 
         // then
         assertEquals(6765, result);

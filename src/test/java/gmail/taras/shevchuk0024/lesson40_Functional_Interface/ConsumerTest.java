@@ -10,6 +10,6 @@ class ConsumerTest {
         // given
         int maxAmount = 100;
         // when + then
-        Consumer.giveRandomNumber.accept(maxAmount);
+        ConsumerUtils.giveRandomNumber.accept(maxAmount);
     }
 }

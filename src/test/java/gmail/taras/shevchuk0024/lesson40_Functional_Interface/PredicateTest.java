@@ -10,7 +10,7 @@ class PredicateTest {
         // given
         int number = 3;
         // when
-        boolean result = Predicate.isSimple.test(number);
+        boolean result = PredicateUtils.isPrime.test(number);
         // then
         assertTrue(result);
     }
@@ -20,7 +20,7 @@ class PredicateTest {
         // given
         int number = 40;
         // when
-        boolean result = Predicate.isSimple.test(number);
+        boolean result = PredicateUtils.isPrime.test(number);
         // then
         assertFalse(result);
     }

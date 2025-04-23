@@ -11,7 +11,7 @@ class FunctionTest {
         Double value = 65.2;
 
         // when
-        Long result = Function.roundToLong.apply(value);
+        Long result = FunctionUtils.roundToLong.apply(value);
 
         // then
         assertEquals(65, result);
