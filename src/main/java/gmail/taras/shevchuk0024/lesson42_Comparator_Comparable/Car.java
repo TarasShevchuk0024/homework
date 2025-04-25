@@ -1,5 +1,7 @@
 package gmail.taras.shevchuk0024.lesson42_Comparator_Comparable;
 
+import java.util.Comparator;
+
 public class Car implements Comparable<Car> {
     private int yearOfManufacture;
     private double engineCapacity;
@@ -43,4 +45,11 @@ public class Car implements Comparable<Car> {
                 ", engineCapacity=" + engineCapacity +
                 '}';
     }
+
+    public static Comparator<Car> byEngineCapacity = new Comparator<Car>() {
+        @Override
+        public int compare(Car car1, Car car2) {
+            return Double.compare(car1.getEngineCapacity(), car2.getEngineCapacity());
+        }
+    };
 }

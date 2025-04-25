@@ -1,8 +1,6 @@
 package gmail.taras.shevchuk0024.lesson42_Comparator_Comparable;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -28,7 +26,16 @@ public class Main {
         Collections.sort(garage);
 
         System.out.println("After Sorting: " + garage);
+        System.out.println(" ");
 
+        Set<Car> sortedByEngine = new TreeSet<>(Comparator.comparing(Car::getEngineCapacity));
 
+        sortedByEngine.add(car1);
+        sortedByEngine.add(car2);
+        sortedByEngine.add(car3);
+        sortedByEngine.add(car4);
+        sortedByEngine.add(car5);
+
+        System.out.println("Sorted by engine capacity: " + sortedByEngine);
     }
 }
